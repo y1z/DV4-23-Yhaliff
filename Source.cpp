@@ -30,14 +30,24 @@ int main() {
 void guess_number()
 {
 	int option = 0;
-	std::cout << "selecionar numero";
-	std::cin >> option;
-	if (option > 99 || option < 0) {
-		std::cout << "Fuera del rango permitido";
+	int rand_number = rand() % 100;
+
+	bool keep_looping = true;
+	while (keep_looping) {
+		std::cout << "selecionar numero";
+		std::cin >> option;
+
+		if (option > 99 || option < 0) {
+			std::cout << "Fuera del rango permitido";
+		}
+		else {
+			if (option == rand_number) {
+				std::cout << "lo advinar el numero lograste siiiiii!I!II!Iii\n";
+			}
+
+		}
+
 	}
-	else {
-		int rand_number = rand() % 100;
-		std::cout << "numero selecionado = " << option << '\n' << "numero alazar = " << rand_number << '\n';
-	}
+
 
 }
