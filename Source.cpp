@@ -43,8 +43,14 @@ void guess_number()
 		else {
 			if (option == rand_number) {
 				std::cout << "lo advinar el numero lograste siiiiii!I!II!Iii\n";
+				keep_looping = false;
 			}
-
+			if (option > rand_number) {
+				std::cout << "el numero es un numero menor\n";
+			}
+			if (option < rand_number) {
+				std::cout << "el number es un numero mayor\n ";
+			}
 		}
 
 	}
