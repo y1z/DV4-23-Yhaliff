@@ -36,11 +36,11 @@ void guess_number()
 
 	bool keep_looping = true;
 	while (keep_looping) {
-		std::cout << "selecionar numero";
+		std::cout << "selecionar numero ";
 		std::cin >> guessed_num;
 
 		if (guessed_num > 99 || guessed_num < 0) {
-			std::cout << "Fuera del rango permitido";
+			std::cout << "Fuera del rango permitido ";
 		}
 		else {
 			if (guess_number_helper(rand_number,guessed_num)) {
@@ -68,7 +68,6 @@ bool guess_number_helper(int rand_num, int guessed_num)
 		std::cout << "el number es un numero mayor\n ";
 	}
 
-	// used to make sure no clue is repetead unnecesarly
 	if (std::abs(guessed_num - rand_num) <= 5) {
 		std::cout << "ya esta muy cerca\n";
 	}
